@@ -12,8 +12,6 @@ import numpy as np
 # Load the model
 model = pickle.load(open("ConstructionCostEstimator.pkl", 'rb'))
 
-st.title("🏗️ Construction Cost Estimator")
-st.subheader("🔥Enter the details of your construction project")
 # Mapping dictionaries
 location_map = {'rural': 0, 'urban': 1, 'suburban': 2, 'metropolitan': 3}
 quality_map = {'low': 0, 'medium': 1, 'high': 2}
@@ -22,6 +20,8 @@ luxury_map = {'basic': 0, 'standard': 1, 'luxury': 2}
 type_map = {'commercial': 0, 'residential': 1}
 
  
+st.title("🏗️ Construction Cost Estimator")
+st.subheader("🔥Enter the details of your construction project")
 
 location = st.selectbox("Location:", list(location_map.keys()))
 type_of_property = st.selectbox("Property Type:", list(type_map.keys()))
@@ -50,6 +50,7 @@ if st.button("Predict Cost"):
     st.markdown(
     f"<p style='color:black; font-weight:bold; font-size:16px;'>The estimated construction cost is: {predicted_price}</p>", 
     unsafe_allow_html=True)
+
 
 
 
