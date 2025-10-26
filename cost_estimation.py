@@ -24,6 +24,24 @@ type_map = {'commercial': 0, 'residential': 1}
 # Display the background image using st.image
 
 
+def add_bg_from_url():
+    st.markdown(
+        f"""
+        <style>
+        .stApp {{
+            background-image: url("https://img.freepik.com/premium-photo/portrait-construction-worker-with-safety-helmet-city-buildings-construction-white_339391-24546.jpg?w=2000");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+# Call the function to set the background
+add_bg_from_url()
 # Streamlit UI
 st.title("Construction Cost Estimator")
 
@@ -57,3 +75,4 @@ if st.button("Predict Cost"):
     st.markdown(
     f"<p style='color:black; font-weight:bold; font-size:16px;'>The estimated construction cost is: {predicted_price}</p>", 
     unsafe_allow_html=True)
+
