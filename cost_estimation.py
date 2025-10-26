@@ -124,9 +124,10 @@ if st.button("Predict Cost"):
 
     prediction = model.predict(features)
     
-    prediction_in_dollars = prediction[0] / 80  # Replace 80 with the current exchange rate if needed
-    predicted_price = f"${prediction_in_dollars:,.2f}"
+     # Replace 80 with the current exchange rate if needed
+    predicted_price = f"${prediction:,.2f}"
     st.markdown(
     f"<p style='color:black; font-weight:bold; font-size:16px;'>The estimated construction cost is: {predicted_price}</p>", 
     unsafe_allow_html=True)
+
 
