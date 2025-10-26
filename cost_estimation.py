@@ -29,7 +29,7 @@ def add_bg_from_url():
         f"""
         <style>
         .stApp {{
-            background-image: url("https://cdn.vectorstock.com/i/500p/89/40/industrial-theme-background-vector-8278940.jpg");
+            background-image: url("https://wallpapercave.com/wp/wp2662866.jpg");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -129,3 +129,4 @@ if st.button("Predict Cost"):
     st.markdown(
     f"<p style='color:black; font-weight:bold; font-size:16px;'>The estimated construction cost is: {predicted_price}</p>", 
     unsafe_allow_html=True)
+
