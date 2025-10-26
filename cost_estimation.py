@@ -22,70 +22,6 @@ furnished_map = {'Non-Furnished': 0, 'Furnished': 1}
 luxury_map = {'basic': 0, 'standard': 1, 'luxury': 2}
 type_map = {'commercial': 0, 'residential': 1}
 
-# Display the background image using st.image
-
-def add_bg_from_url():
-    
-# Call the function to set the background
-add_bg_from_url()
-# Streamlit UI with blue and black text styling
-st.markdown(
-    """
-    <h1 style='text-align: center; color: #0078D7; 
-               text-shadow: 2px 2px 5px rgba(0,0,0,0.3); 
-               font-size: 50px; font-weight: bold;'>🏗️ Construction Cost Estimator</h1>
-    """,
-    unsafe_allow_html=True
-)
-
-st.markdown(
-    """
-    <h3 style='color: #000000; 
-               text-shadow: 1px 1px 2px rgba(255,255,255,0.4); 
-               font-size: 26px; font-weight: 600;'>Enter the details of your construction project:</h3>
-    """,
-    unsafe_allow_html=True
-)
-# Enhance overall text visibility
-st.markdown("""
-    <style>
-    /* Style for all form labels */
-    label {
-        color: #000000 !important;   /* pure black text for contrast */
-        font-weight: 600 !important; /* make it bold */
-        font-size: 16px !important;
-    }
-
-    /* Style for selectbox and input containers */
-    .stSelectbox label, .stNumberInput label {
-        color: #000000 !important;
-        font-weight: 600 !important;
-    }
-
-    /* Adjust button appearance */
-    .stButton>button {
-        background-color: #0078D7;
-        color: white;
-        font-weight: bold;
-        border-radius: 8px;
-        border: none;
-        padding: 8px 20px;
-        transition: 0.3s;
-    }
-
-    .stButton>button:hover {
-        background-color: #005a9e;
-        color: #ffffff;
-    }
-
-    /* Optional: give the app a subtle overlay for readability */
-    .stApp {
-        background-color: rgba(255, 255, 255, 0.9);
-        border-radius: 10px;
-        padding: 20px;
-    }
-    </style>
-""", unsafe_allow_html=True)
  
 
 location = st.selectbox("Location:", list(location_map.keys()))
@@ -115,4 +51,5 @@ if st.button("Predict Cost"):
     st.markdown(
     f"<p style='color:black; font-weight:bold; font-size:16px;'>The estimated construction cost is: {predicted_price}</p>", 
     unsafe_allow_html=True)
+
 
