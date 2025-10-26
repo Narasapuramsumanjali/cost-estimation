@@ -2,5 +2,5 @@ Scikit-Learn
 streamlit
 numpy
 pandas
-
+num2words
   
