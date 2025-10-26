@@ -8,12 +8,7 @@ import streamlit as st
 import pickle
 import numpy as np
 
-try:
-with open("ConstructionCostEstimator.pkl", 'rb') as f:
-model = pickle.load(f)
-except Exception as e:
-st.error(f"❌ Failed to load model: {e}")
-st.stop()
+model = pickle.load(open("ConstructionCostEstimator.pkl", 'rb'))
 
 location_map = {'rural': 0, 'urban': 1, 'suburban': 2, 'metropolitan': 3}
 quality_map = {'low': 0, 'medium': 1, 'high': 2}
@@ -59,4 +54,5 @@ type_encoded = type_map.get(type_of_property, -1)
 except Exception as e:
     st.error(f"⚠️ Prediction failed: {e}")
 ```
+
 
